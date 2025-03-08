@@ -25,7 +25,7 @@ try{
     const balanceInLamports = await connection.getBalance(publickey);
     const balanceInSOL = balanceInLamports / LAMPORTS_PER_SOL;
     console.log(
-        `💰 Finished! The balance for the wallet at address ${publickey} is ${balanceInSOL}!`,
+        `💰 Finished! The balance for the wallet at address ${publickey.toBase58()} is ${balanceInSOL}!`,
     );
 }
 catch(error){
